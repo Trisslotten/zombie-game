@@ -1,0 +1,50 @@
+Bra Dayz
+
+Architecture
+	Shared systems that handle both client and server
+	Client only systems listen to shared systems 
+
+	Layered (low -> high)
+		Core Engine
+			Utilities, different individual libraries
+		Gameplay
+			Component Management
+				Different components and systems
+			Glue
+				Decides when to create components and glues together components and engine
+			
+Engine ideas
+	render on different thread
+	multithread workloads instead of everything
+		do it case by case
+	get tracy working
+
+Map
+	infinite procedurally generated
+	generate heightmap?
+		virtual textures?
+	generate cities/villages
+	houses:
+		the-sims-like walls
+		everything is an item
+			but probably not terrain?
+
+Online
+	Co-op
+		Not many players in a server
+
+	Networking API done?
+	
+	Implement missing functionality
+		Reliable vs unreliable
+		reliable over udp
+		always ordered
+		
+	Streaming terrain, houses, items, zombies
+
+	Gameplay event system like in Robotligan - Spacially local events?
+
+Prototype Roadmap
+	Debug camera
+		Send transform to server
+			Write to player entity
